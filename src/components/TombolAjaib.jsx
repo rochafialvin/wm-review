@@ -19,9 +19,7 @@ class TombolAjaib extends Component {
 
    tombolPost = () => {
       let config = {
-         // req.header('Authorization)
-         headers : { Authorization : 'Auth Token'},
-         // req.query  
+         headers : { Authorization : 'Auth Token'},  
          params : { username : 'Karen' }            
       }
 
@@ -30,18 +28,41 @@ class TombolAjaib extends Component {
          description : "Winter Soldier"
       }
 
-      // req.params.tombolid
       axios.post('http://localhost:2020/tombolget/15', body, config ) 
          .then(res => console.log({res}))
          .catch(err => console.log({err}))
    }
 
    tombolPatch = () => {
+      let config = {
+         headers : { Authorization : 'Auth Token'},  
+         params : { username : 'Karen' }            
+      }
 
+      // req.body
+      let body = {
+         description : "Winter Soldier"
+      }
+
+      axios.patch('http://localhost:2020/tombolget/15', body, config ) 
+         .then(res => console.log({res}))
+         .catch(err => console.log({err}))
    }
 
    tombolDelete = () => {
+      let config = {
+         headers : { Authorization : 'Auth Token'},  
+         params : { username : 'Karen' }            
+      }
 
+      // req.body
+      let body = {
+         description : "Winter Soldier"
+      }
+
+      axios.patch('http://localhost:2020/tombolget/15', body, config ) 
+         .then(res => console.log({res}))
+         .catch(err => console.log({err}))
    }
 
 

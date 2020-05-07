@@ -1,0 +1,38 @@
+- Methods
+   GET
+      - Params
+      - Query
+      - Header
+
+   POST
+      - Params
+      - Query
+      - Header
+      - Body
+
+   PATCH
+      - Params
+      - Query
+      - Header
+      - Body
+
+   DELETE
+      - Params
+      - Query
+      - Header
+      - Body
+
+- STATUS
+https://httpstatuses.com/
+
+Success (2xx)
+   200 OK
+   201 Created
+
+Client Error
+   400 Bad Request
+   401 Unauthorized
+   404 Not Found
+
+Server Error
+    500 Internal Server Error

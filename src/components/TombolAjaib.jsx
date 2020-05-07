@@ -65,6 +65,16 @@ class TombolAjaib extends Component {
          .catch(err => console.log({err}))
    }
 
+   tombolStatus = () => {
+      axios.get('http://localhost:2020/status')
+         // SUCCESS : 2xx
+         // res.data , res.status, res.statusText
+         .then(res => console.log({res}))
+
+         // ERROR : 3xx, 4xx
+         // err.response.data, err.response.status, err.response.statusText
+         .catch(err => console.log({err}))
+   }
 
    render(){
       return (
@@ -74,6 +84,7 @@ class TombolAjaib extends Component {
             <button onClick={this.tombolPost} className="btn btn-block btn-outline-success" > POST </button>
             <button onClick={this.tombolPatch} className="btn btn-block btn-outline-secondary" > PATCH </button>
             <button onClick={this.tombolDelete} className="btn btn-block btn-outline-danger" > DELETE </button>
+            <button onClick={this.tombolStatus} className="btn btn-block btn-outline-warning" > STATUS </button>
          </div>
       )
    }
